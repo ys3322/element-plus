@@ -106,7 +106,7 @@ export const useDateTable = (
   const getSlotData = ({ text, type }: CalendarDateCell) => {
     const day = getFormattedDate(text, type)
     return {
-      isSelected: day.isSame(props.selectedDay),
+      isSelected: day.isSame(props.selectedDay, 'day'),
       type: `${type}-month`,
       day: day.format('YYYY-MM-DD'),
       date: day.toDate(),
